@@ -1,0 +1,193 @@
+<DOCTPYE html>
+  <html>
+    <head>
+      <style>
+        *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.image-box{
+  height: 800px;
+  overflow: hidden;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-box{
+  padding-inline: 5em;
+}
+
+.title{
+  font-size: 4em;
+  max-width: max-content;
+  margin-block-end: 0.25em;
+}
+
+.text{
+  opacity: 0.6;
+  line-height: 2.25;
+}
+
+[data-reveal="left"]{
+  clip-path: inset(0 100% 0 0);
+}
+
+[data-reveal="left"].revealed{
+  animation: reveal-left 1.2s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+}
+
+@keyframes reveal-left{
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[data-reveal="right"]{
+  clip-path: inset(0 0 0 100%);
+}
+
+[data-reveal="right"].revealed{
+  animation: reveal-right 1.2s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+}
+
+@keyframes reveal-right{
+  0% {
+    clip-path: inset(0 0 0 100%);_
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.image-box .img{
+  transform: scale(1.5);
+  transition: 1.2s cubic-bezier(0.17, 0.97, 0.38, 1);
+}
+
+.image-box.revealed .img{
+  transform: scale(1.5);
+}
+
+@media only screen and (max-width: 768px) {
+.section {
+grid-template-columns: 1fr;
+text-align: center;
+}
+.title {
+font-size: 3em;
+}
+.content-box {
+padding: 2em;
+}
+}
+
+@media only screen and (max-width: 480px) {
+.title {
+font-size: 2em;
+}
+.text {
+font-size: 0.8em;
+}
+}
+      </style>
+    </head>
+    <body>
+<section class="section">
+  <div class="image-box" data-reveal="left">
+    <img src="https://w.namu.la/s/fb26822ba5169529d182ce079fb11a8978bae8bfbf6b5f252b5e33697187df53aab843ea4ba5a1011c3530d6517169d6eae1b9d687b25939b6f5561d1ec51d6aa1986fdcbb0b14f69843f9b1d4285f2b818756bfbdb8c4a9e500225597432a7f" alt="" class="img">
+  </div>
+  <div class="content-box">
+    <h2 class="title" data-reveal="left">
+      Maple Story (메이플스토리)
+    </h2>
+    <p class="text" data-reveal="left">
+      주력으로 하고 방송에서 가장 자주하는 게임은
+      메이플 스토리라는 게임입니다. 
+      메이플 스토리는 넥슨의 MMORPG 게임이며 
+      제가 키우는 직업은 옆의 사진에있는 패스파인더라는 
+      모험가 궁수직업을 키우고 있습니다!
+    </p>
+  </div>
+  <div class="content-box">
+    <h2 class="title" data-reveal="left">
+      just chatting (저스트 챗)
+    </h2>
+    <p class="text" data-reveal="left">
+      보통 방송 초반이나 후반쯤에 자주하는 이름 그대로 
+      소통을 하는 시간입니다.
+      보통 카페에 올라온 글을 보면서 시청자들과 소통합니다
+    </p>
+  </div>
+  <div class="image-box" data-reveal="left">
+    <img src="https://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2022/02/520-speaking-head-emoji-coloring-page.png" alt="" class="img">
+  </div>
+  <div class="image-box" data-reveal="left">
+    <img src="https://cdn.epnc.co.kr/news/photo/201911/92733_83711_2650.jpg" alt="" class="img">
+  </div>
+  <div class="content-box">
+    <h2 class="title" data-reveal="left">
+      Comprehensive game (종합게임)
+    </h2>
+    <p class="text" data-reveal="left">
+      사실 주력으로 잡은 게임은 메이플스토리 이지만
+      다른 게임들도 합니다 예를 들자면 스컬,파워워시 시뮬레이션
+      등을 합니다. 
+      파워워시 시뮬레이션을 하면 보통 시청자들과 소통을 하면서
+      같이 병행하는 게임입니다
+    </p>
+  </div>
+  <div class="content-box">
+    <h2 class="title" data-reveal="left">
+      Pokémon (포켓몬)
+    </h2>
+    <p class="text" data-reveal="left">
+      사실 그렇게 자주하는 게임은 아니지만 정말 가끔가다가 한번씩?
+      했습니다 요즘은 그렇게 자주 하지는 않습니다
+    </p>
+  </div>
+  <div class="image-box" data-reveal="left">
+    <img src="https://pokemonkorea.co.kr/img/sub/img_compay_info.png" alt="" class="img">
+  </div>
+</section>
+    </body>
+    <script>
+      const revealElements = document.querySelectorAll("[data-reveal]");
+
+const scrollReveal = function(){
+  for(let i = 0; i < revealElements.length; i++){
+    const isElementsOnScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight;
+    
+    if(isElementsOnScreen){
+      revealElements[i].classList.add("revealed")
+    } else {
+      revealElements[i].classList.remove("revealed")
+    }
+  }
+}
+
+window.addEventListener("scroll", scrollReveal);
+window.addEventListener("load", scrollReveal);
+    </script>
+  </html>
